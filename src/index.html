@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Портфолио</title>
 </head>
 <body>
-    
+    <header class="header main__header">
+        <div class="container header__container">
+            <div class="wrapper header__wrapper">
+                <nav class="navigation header__navigation">
+                    <ul class="menu header__menu">
+                        <li class="item menu__item header__menu__item header__menu__item_1"><a href="#">Обо мне</a></li>
+                        <li class="item menu__item header__menu__item header__menu__item_2"><a href="#">Портфолио</a></li>
+                        <li class="item menu__item header__menu__item header__menu__item_3"><a href="#">Этапы работ</a></li>
+                        <li class="item menu__item header__menu__item header__menu__item_4"><a href="#">Цены</a></li>
+                        <li class="item menu__item header__menu__item header__menu__item_5"><a href="#">Обратная связь</a></li>
+                    </ul>
+                </nav>
+                <div class="information header__information">
+                    <a class="tel header__tel" href="tel:+972508364407">+972 50 836 44 07</a>
+                    <div class="line header__line"></div>
+                    <a class="post header__post" href="mailto:mihail51@gmail.com">Mihail51@Gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="central">
+        <div class="container central__container">
+            <div class="wraper central__wrapper">
+                <picture class="image central__image">
+                   <!-- 1x: 1140px; 2x: 2280px --> 
+                   <!-- tablet 1x: 540px; 2x: 1080px --> 
+                   <!-- mobile 1x: 340px; 2x: 680px -->
+                   <source media="(max-width: 360px)" type="image/webp" srcset="images/main-image-mobile.webp 1x, images/main-image-mobile@2.webp 2x">
+                   <source media="(max-width: 360px)" type="image/jpg" srcset="images/main-image-mobile.jpg 1x, images/main-image-mobile@2.jpg 2x">
+                   <source media="(max-width: 768px)" type="image/webp" srcset="images/main-image-tablet.webp 1x, images/main-image-tablet@2.webp 2x">
+                   <source media="(max-width: 768px)" type="image/jpg" srcset="images/main-image-tablet.jpg 1x, images/main-image-tablet@2.jpg 2x">
+                   <source media="(max-width: 1920px)" type="image/webp" srcset="images/main-image.webp 1x, images/main-image@2.webp 2x">
+                   <img width="1140" height="310" src="images/main-image.jpg" srcset="images/main-image@2.jpg 2x" alt=""> 
+                </picture>
+                <div class="content central__content">
+                    <p class="subtitle central__subtitle">Александр Антропов</p>
+                    <h2 class="title central__title">web-разработчик</h2>
+                </div>
+                <div class="inner central__inner">
+                    <button></button>
+                    <div class="socials central__socials">
+                        <a href="#" class="social central__social central__social_1">Vk</a>
+                        <div class="line central__line"></div>
+                        <a href="#" class="social central__social central__social_2">Instagram</a>
+                        <div class="line central__line"></div>
+                        <a href="#" class="social central__social central__social_3">Linkedin</a>
+                    </div>
+                </div>
+                <ul class="skills central__skills">
+                    <li class="skill central__skill central__skill_1">
+                        <h4 class="title skill__title">FRONT-END</h4>
+                        <p class="desc skill__desc">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+                    </li>
+                    <li class="skill central__skill central__skill_2">
+                        <h4 class="title skill__title">Back-end</h4>
+                        <p class="desc skill__desc">Разработка сложной back-end логики для готового front-end</p>
+                    </li>
+                    <li class="skill central__skill central__skill_3">
+                        <h4 class="title skill__title">WORDPRESS</h4>
+                        <p class="desc skill__desc">Разработка сайтов - от блога до интернет магазина</p>
+                    </li>
+                    <li class="skill central__skill central__skill_4">
+                        <h4 class="title skill__title">SEO продвижение</h4>
+                        <p class="desc skill__desc">Качественное улучшение позиций сайта в поисковой выдаче</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <main></main>
 </body>
 </html>

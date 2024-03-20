@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -849,4 +850,4 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
-
+html{font-size:10px}body{max-width:1920px;font-family:"Inter",sans-serif;font-size:1.6rem;color:#010101;background-color:#f3f2f0;overflow-x:hidden}.container{width:1140px;margin:0 auto;padding-left:15px;padding-right:15px}.wrapper{width:100%;display:flex;box-sizing:border-box}ul{list-style-type:none;padding:0}.header__wrapper{min-height:24px;margin:26px 0 47px;justify-content:space-between;align-items:center}.header__menu{display:flex;justify-content:start;align-items:center;gap:28px}.header__menu__item a{font-size:1.4rem;text-decoration:none;color:#010101;transition:.3s;-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s}.header__menu__item a:hover{color:#d40000}.header__information{width:285px;display:flex;justify-content:space-between;align-items:center}.header__information a{font-size:1.4rem;text-decoration:none;color:#010101;transition:.3s;-webkit-transition:.3s;-moz-transition:.3s;-ms-transition:.3s;-o-transition:.3s}.header__information a:hover{color:#d40000}.header__line{width:1px;height:24px;background-color:#010101;opacity:.2}
