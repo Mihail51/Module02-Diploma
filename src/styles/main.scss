@@ -340,7 +340,7 @@ h4 {
         justify-content: start;
         align-items: start;
         gap: 10px;
-        margin-bottom: 80px;
+        margin-bottom: 86px;
     }
     &__list {
         width: 100%;
@@ -354,5 +354,64 @@ h4 {
     }
     &__definition {
         flex-basis: 560px;
+    }
+}
+.main {
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: inherit;
+}
+.portfolio {
+    &__wrapper {
+        flex-direction: column;
+        padding-top: 90px;
+    }
+    &__sites {
+        width: 100%;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    &__item {
+        width: 100%;
+        padding: 29px 0;
+        border-bottom: 1px solid $black;
+    }
+    &__site {
+        width: 100%;
+        height: 375px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & a {
+            order: 2;
+        }
+        & figcaption {
+            order: 1;
+            flex-basis: 340px;
+        }
+    }
+    &__title {
+        letter-spacing: 0;
+    }
+}
+.site {
+    &__content {
+        width: 100%;
+        height: 238px;
+    }
+    &__title {
+        text-transform: none;
+        letter-spacing: 0;
+    }
+    &__items {
+        margin: 40px 0;
+    }
+    &__item {
+        margin: 1rem 0;
     }
 }
