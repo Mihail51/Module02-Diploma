@@ -44,6 +44,9 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.block {
+    display: block;
+}
 .container {
     width: 1140px;
     margin: 0 auto;
@@ -365,7 +368,7 @@ h4 {
 .portfolio {
     &__wrapper {
         flex-direction: column;
-        padding-top: 90px;
+        padding: 90px 0 165px;
     }
     &__sites {
         width: 100%;
@@ -413,5 +416,36 @@ h4 {
     }
     &__item {
         margin: 1rem 0;
+    }
+}
+.profit {
+    &__wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &__desc {
+        max-width: 870px;
+    }
+    &__line_horizontal {
+        margin: 78px 0 60px;
+    }
+    &__benefits {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 78px 64px;
+    }
+    &__benefit {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 40px;
+    }
+}
+.benefit {
+    &__title {
+        text-transform: none;
+        margin-bottom: 8px;
+        letter-spacing: 0;
     }
 }
