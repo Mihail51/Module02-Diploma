@@ -96,12 +96,19 @@ h4 {
     font-size: 1.6rem;
     line-height: 150%;
 }
+h5 {
+    font-size: 1rem;
+    line-height: 150%;
+}
 .text {
     font-weight: 400;
     line-height: 150%;
     color: $black;
     opacity: 0.8;
     margin: 0;
+}
+.text-10 {
+    font-size: 1rem;
 }
 .text-14 {
     font-size: 1.4rem;
@@ -423,6 +430,7 @@ h4 {
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
+        margin-bottom: 145px;
     }
     &__desc {
         max-width: 870px;
@@ -447,5 +455,79 @@ h4 {
         text-transform: none;
         margin-bottom: 8px;
         letter-spacing: 0;
+    }
+}
+.skills {
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__skill {
+        height: 148px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba($black, 0.3);
+        opacity: 0.3;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+}
+}
+.skill {
+    &:hover {
+        opacity: 1;
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+    }
+    &:hover &__popup {
+        opacity: 1;
+        z-index: 1;
+        height: 130.5px;
+        bottom: -108px;
+    }
+    &__popup {
+        width: 232px;
+        height: 0;
+        padding: 30px 20px 30px;
+        position: absolute;
+        background-image: url(../images/popup-skill.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        text-align: center;
+        box-sizing: border-box;
+        opacity: 0;
+        z-index: -1;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+}
+    &__title {
+        font-weight: 500;
+        line-height: 150%;
+        color: $white;
+        margin: 0;
+    }
+    &__desc {
+        font-weight: 500;
+        line-height: 150%;
+        color: $white;
+        opacity: 0.8;
     }
 }
