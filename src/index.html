@@ -126,30 +126,33 @@
                 </dl>
                 <hr class="line line_horizontal stages__line_horizontal">
             </div>
-        </div>portfplio
+        </div>
     </section>
     <main class="main">
         <h1 class="title visually-hidden">Портфолио</h1>
-        <section class="portfolio" id="">
+        <section class="portfolio" id="portfolio">
             <div class="container portfolio__container">
                 <div class="wrapper portfolio__wrapper">
                     <h2 class="title portfolio__title">Портфолио</h2>
                     <ul class="sites portfolio__sites">
                         <li class="item portfolio__item portfolio__item_1">
                             <figure class="site portfolio__site portfolio__site_1">
-                                <a href="">
-                                    <picture>
-                                        <source>
-                                        <source>
-                                        <source>
-                                        <source>
-                                        <source>
-                                        <img width="560" height="315" src="images/mailis.jpg" alt="">
+                                <a href="https://test.mihail51.info/" target="_blank">
+                                    <!-- 1x: 650px; 2x: 1300px: -->
+                                    <!-- tablet 1x: 540px; 2x: 1080px; -->
+                                    <!-- mabile 1x 340px; 2x: 680px-->
+                                    <picture class="image portfolio__image">
+                                        <source media="(max-width: 360px)" type="image/webp" srcset="images/mailis-mobile.webp 1x, images/mailis-mobile@2x.webp 2x">
+                                        <source media="(max-width: 360px)" type="image/jpg" srcset="images/mailis-mobile.jpg 1x, images/mailis-mobile@2x.jpg 2x">
+                                        <source media="(max-width: 768px)" type="image/webp" srcset="images/mailis-tablet.webp 1x, images/mailis-tablet@2x.webp 2x">
+                                        <source media="(max-width: 768px)" type="image/jpg" srcset="images/mailis-tablet.jpg 1x, images/mailis-tablet@2x.jpg 2x">
+                                        <source type="image/webp" srcset="images/mailis.webp 1x, images/mailis@2.webp 2x">
+                                        <img width="560" height="315" src="images/mailis.jpg" srcset="images/mailis@2.jpg 2x" alt="">
                                     </picture>
                                 </a>
                                 <figcaption>
                                     <div class="content site__content">
-                                        <h3 class="title site__title">Agata Bielen</h3>
+                                        <h3 class="title site__title">Mailis</h3>
                                         <ul class="items site__items">
                                             <li class="item site__item text text-16">– верстка по макету из Figma</li>
                                             <li class="item site__item text text-16">– наполнение сайта контентом</li>
@@ -162,19 +165,19 @@
                         </li>
                         <li class="item portfolio__item portfolio__item_2">
                             <figure class="site portfolio__site portfolio__site_2">
-                                <a href="">
-                                    <picture>
-                                        <source>
-                                        <source>
-                                        <source>
-                                        <source>
-                                        <source>
-                                        <img width="560" height="315" src="images/israel.jpg" alt="">
+                                <a href="http://israel.mihail51.info/" target="_blank">
+                                    <picture class="image portfolio__image">
+                                        <source media="(max-width: 360px)" type="image/webp" srcset="images/israel-mobile.webp 1x, images/israel-mobile@2x.webp 2x">
+                                        <source media="(max-width: 360px)" type="imagejpg/" srcset="images/israel-mobile.jpg 1x, images/israel-mobile@2x.jpg 2x">
+                                        <source media="(max-width: 768px)" type="image/webp" srcset="images/israel-tablet.webp 1x, images/israel-tablet@2x.webp 2x">
+                                        <source media="(max-width: 768px)" type="imagejpg/" srcset="images/israel-tablet.jpg 1x, images/israel-tablet@2x.jpg 2x">
+                                        <source type="image/webp" srcset="images/israel.webp 1x, images/israel@2.webp 2x">
+                                        <img width="560" height="315" src="images/israel.jpg" srcset="images/israel@2.jpg 2x" alt="">
                                     </picture>
                                 </a>
                                 <figcaption>
                                     <div class="content site__content">
-                                        <h3 class="title site__title">Lemon</h3>
+                                        <h3 class="title site__title">Israel</h3>
                                         <ul class="items site__items">
                                             <li class="item site__item text text-16">– верстка по макету из PSD</li>
                                             <li class="item site__item text text-16">– доступен функционал получения заказов</li>
@@ -458,7 +461,7 @@
                             <div class="description rate__description">
                                 <div class="category rate__category">
                                     <p class="object rate__object text text-28">Разработка <br>интернет - магазина</p>
-                                    <p class="desc rate__desc text text-16">Полноценный каталог вашей продукции</p>
+                                    <p class="desc rate__desc text text-16">Полноценный каталог <span>вашей продукции</span></p>
                                 </div>
                                 <button class="btn central__btn rate__btn">Обсудить проект</button>
                             </div>
