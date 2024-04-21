@@ -18,12 +18,13 @@ $r_desk_xl: 1200px;
 $r_desk_xxl: 1400px;
 $r_desk_1600: 1600px;
 
+$bg_1: calc(60px + (106 - 60)*((100vw - 360px)/(576 - 360)));
 
 html {
     font-size: 10px;
     scroll-behavior: smooth;
 @media (max-width: $r_mob_sm) {
-    font-size: calc( ((100vw - 360px)/(576 - 360)) * (10 - 7.5) + 7.5px);
+    font-size: calc(((100vw - 360px)/(576 - 360)) * (10 - 7.5) + 7.5px);
 }
 }
 
@@ -96,16 +97,22 @@ h2 {
     @media (max-width: $r_tab_md) {
         font-size: 4.8rem;
     }
+    @media (max-width: $r_mob_sm) {
+        font-size: 3.74rem;
+    }
     @media (max-width: $r_mob_360) {
         font-size: 28px;
-    }
+    }  
 }
 h3 {
     font-size: 2.8rem;
     line-height: 150%;
+    @media (max-width: $r_mob_sm) {
+        font-size: 2.13rem;
+    }
     @media (max-width: $r_mob_360) {
         font-size: 16px;
-    }
+    }  
 }
 h4 {
     font-size: 1.6rem;
@@ -127,9 +134,15 @@ h5 {
 }
 .text-12 {
     font-size: 1.2rem;
+    @media (max-width: $r_mob_sm) {
+        font-size: 1.33rem;
+    }
 }
 .text-14 {
     font-size: 1.4rem;
+    @media (max-width: $r_mob_sm) {
+        font-size: 1.55rem;
+    }
     @media (max-width: $r_mob_360) {
         font-size: 12px;
     }
@@ -139,6 +152,9 @@ h5 {
 }
 .text-28 {
     font-size: 2.8rem;
+    @media (max-width: $r_mob_sm) {
+        font-size: 2.13rem;
+    }
 }
 .line_horizontal {
     width: 100%;
@@ -194,7 +210,7 @@ h5 {
             order: 1;
         }
         & a {
-            font-size: 1.4rem;
+            font-size: 14px;
             text-decoration: none;
             color: $black;
             transition: 0.3s;
@@ -356,24 +372,27 @@ h5 {
     @media (max-width: $r_tab_md) {
         background-position: calc((100% - 540px)/2 + 106px) 367px, calc((100% - 540px)/2 + 110px) 153.5px;
     }
-    @media (max-width: $r_mob_360) {
-        background-size: 29px, 135px;
-        background-position: calc((100% - 360px)/2 + 26px) 374px, calc((100% - 360px)/2 + 25px) 247.5px;
-    }
+     @media (max-width: $r_mob_sm) {
+        background: none;
+     }
+   
     &__container {
-        background: url(../images/ellipse-white.svg)no-repeat;
+        background: url(../images/ellipse-white.svg)no-repeat;  
         background-size: 106px;
         background-position: calc(100% - 55px) calc(100% - 173px);
         @media (max-width: $r_desk_lg) {
             background-position: calc(100% - 53px) calc(100% - 280px);
         }
         @media (max-width: $r_mob_sm) {
-            background-position: calc(100% - 46px) calc(100% - 280px);
+            background: none;
+ /*           background-size: calc(60px + (106 - 60)*((100vw - 360px)/(576 - 360)));
+            background-position: calc(100%/2 + 190px) calc(100% - 280px);  
+            background-position: calc((100% - 39px) + ((100% - 46px) - (100% - 39px))*((100vw - 360px)/(576 - 360))), calc((100% - 230px) + ((100% - 280px) - (100% - 230px))*((100vw - 360px)/(576 - 360)));  */
         }
-        @media (max-width: $r_mob_360) {
+/*        @media (max-width: $r_mob_360) {
             background-size: 60px;
             background-position: calc(100% - 39px) calc(100% - 230px);
-        }
+        }   */
     }
     &__wrapper {
         flex-direction: column;
@@ -389,18 +408,45 @@ h5 {
         width: 100%;
         height: auto;
     }
+    &__wrap {
+/*        background: url(../images/ellipse-white.svg)no-repeat;
+        background-size: 106px;   */
+        @media (max-width: $r_mob_sm) {
+            background: url(../images/ellipse-white.svg)no-repeat;
+            background-size: $bg_1;
+            background-position: calc(100% - (-15px + $bg_1/2)) 194px;
+            background-position: calc(240px + (478 - 295)*((100vw - 360px)/(576 - 360))) calc(215px + (194 - 215)*((100vw - 360px)/(576 - 360)));
+    /*        background-position: calc(100%/2 + 190px) 195px;  
+            background-position: calc((100% - calc(0 + $bg_1/2)) + calc((100% - calc(- 15 + $bg_1/2)) - (100% - calc(0 + $bg_1/2))*((100vw - 360px)/(576 - 360))) calc(215px + (195 - 215)*((100vw - 360px)/(576 - 360)));  */  
+        }
+        @media (max-width: $r_mob_360) {
+            background-size: 60px;
+    /*        background-position: calc(100%/2 + 115px) 215px;  */
+            background-position: calc(100% - (0px + $bg_1/2)) 215px;
+        }
+    }
     &__content {
         max-width: 799px;
         height: 162px;
-        margin: 90px 0 126px;
+        margin: 120px 0 98px;
         @media (max-width: $r_desk_lg) {
             margin: 10px 0 66px;
         }
         @media (max-width: $r_tab_md) {
             margin: 10px 0 140px;
         }
+        @media (max-width: $r_mob_sm) {
+            margin: 0;
+            padding: 38px 0 36px;
+        }
+         @media (max-width: $r_mob_sm) {
+            background: url(../images/polygon-1.svg) no-repeat, url(../images/ellipse-white.svg)no-repeat;
+            background-size: calc(((100vw - 360px)/(576 - 360)) * (60 - 29) + 29px), calc(((100vw - 360px)/(576 - 360)) * (200 - 135) + 135px);
+            background-position: calc((100% - 360px)/2 + 26px) calc(156px + (170 - 156)*((100vw - 360px)/(576 - 360))), calc((100% - 360px)/2 + 25px) calc(28px + (5 - 28)*((100vw - 360px)/(576 - 360)));  
+        }
         @media (max-width: $r_mob_360) {
-            margin: 40px 0 36px;
+            background-size: 29px, 135px;
+            background-position: calc((100% - 360px)/2 + 26px) 156px, calc((100% - 360px)/2 + 25px) 28px;
         }
     }
     &__subtitle {
@@ -518,6 +564,24 @@ h5 {
         @media (max-width: $r_mob_360) {
             height: 63px;
         }
+        &:nth-child(odd) {
+/*            flex-basis: 220px;  */
+            @media (max-width: $r_mob_sm) {
+                width: calc(((100vw - 360px)/(576 - 360)) * (266 - 142) + 142px);
+            }
+            @media (max-width: $r_mob_360) {
+                width: 142px;
+            }
+        }
+        &:nth-child(even) {
+/*            flex-basis: 270px;  */
+            @media (max-width: $r_mob_sm) {
+                width: calc(((100vw - 360px)/(576 - 360)) * (266 - 170) + 170px);
+            }
+            @media (max-width: $r_mob_360) {
+                width: 170px;
+            }
+        }  
     }
 }
 .about {
@@ -554,7 +618,7 @@ h5 {
     }
     &__advantages {
         width: 560px;
-        height: 337px;
+        min-height: 337px;
         display: flex;
         justify-content: space-between;
         align-items: start;
@@ -564,6 +628,7 @@ h5 {
         }
         @media (max-width: $r_mob_360) {
             height: 250px;
+            min-height: auto;
         }
     }
     &__advantage {
@@ -577,12 +642,18 @@ h5 {
         }
         &:nth-child(odd) {
             flex-basis: 220px;
+            @media (max-width: $r_mob_sm) {
+                flex-basis: calc(((100vw - 360px)/(576 - 360)) * (220 - 145) + 145px);
+            }
             @media (max-width: $r_mob_360) {
                 flex-basis: 145px;
             }
         }
         &:nth-child(even) {
             flex-basis: 270px;
+            @media (max-width: $r_mob_sm) {
+                flex-basis: calc(((100vw - 360px)/(576 - 360)) * (270 - 170) + 170px);
+            }
             @media (max-width: $r_mob_360) {
                 flex-basis: 170px;
             }
@@ -616,6 +687,7 @@ h5 {
             margin-bottom: 26px;
         }
         @media (max-width: $r_mob_360) {
+            margin-bottom: 44px;
             gap: 0;
         }
     }
@@ -641,6 +713,10 @@ h5 {
         }
         @media (max-width: $r_desk_lg) {
             flex-basis: 40%;
+        }
+        @media (max-width: $r_mob_sm) {
+            flex-basis: 42%;
+            font-size: 2.13rem;
         }
         @media (max-width: $r_mob_360) {
             flex-basis: 43%;
@@ -704,7 +780,7 @@ h5 {
             background-position-x: calc(100% - (((100vw - 360px)/(576 - 360)) * (156 - 0) + 0px));
         }
         @media (max-width: $r_mob_360) {
-            padding: 55px 0 70px;
+            padding: 35px 0 70px;
             background-size: 197px;
             background-position-x: 100%;
         }
@@ -804,7 +880,10 @@ h5 {
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
-        margin-bottom: 30px;
+        margin-bottom: 146px;
+        @media (max-width: $r_mob_360) {
+            margin-bottom: 31px;
+        }
     }
     &__desc {
         max-width: 870px;
@@ -813,7 +892,10 @@ h5 {
         }
     }
     &__line_horizontal {
-        margin: 40px 0 20px;
+        margin: 75px 0 62px;
+        @media (max-width: $r_mob_360) {
+            margin: 40px 0 18px;
+        }
     }
     &__benefits {
         display: grid;
@@ -899,13 +981,15 @@ h5 {
             filter: grayscale(0);
             -webkit-filter: grayscale(0);
             opacity: 1;
+            height: calc(((100vw - 360px)/(576 - 360)) * (126 - 44) + 44px);
+            padding: 0;    
         }
-        @media (max-width: $r_mob_360) {
-            padding: 11px 0;
-        }
-        & > img {
+       & > img {
             @media (max-width: $r_tab_md) {
                 width: 50%;
+            }
+            @media (max-width: $r_mob_sm) {
+                width: calc(((100vw - 360px)/(576 - 360)) * (50 - 25) + 25%);
             }
             @media (max-width: $r_mob_360) {
                 width: 25%;
@@ -972,6 +1056,9 @@ h5 {
         font-weight: 500;
         line-height: 150%;
         color: rgba($black, 0.8);
+        @media (max-width: $r_mob_sm) {
+        font-size: 1.33rem;
+        }
         @media (max-width: $r_mob_360) {
             font-size: 10px;
         }
@@ -990,21 +1077,33 @@ h5 {
     @media (max-width: $r_tab_md) {
         background-position: calc((100% - 540px)/2) 0;
     }
+    @media (max-width: $r_mob_sm) {
+         background-size: 138px;
+        background-position: calc((100% - calc(360px + (576 - 360)*((100vw - 360px)/(576 - 360))))/2 - calc(-5px + (0 + 5)*((100vw - 360px)/(576 - 360)))) 6px;
+    }
     @media (max-width: $r_mob_360) {
          background-size: 138px;
-        background-position: calc((100% - 360px)/2 - 7px) 6px;
+        background-position: calc((100% - 360px)/2 - 5px) 6px;
     }
     &__wrapper {
-        margin-bottom: 80px;
+        margin-bottom: 21px;
         padding-top: 80px;
         flex-direction: column;
-        background: url(../images/ellipse-white.svg) no-repeat, url(../images/ellipse-white.svg) no-repeat;
+/*        background: url(../images/ellipse-white.svg) no-repeat, url(../images/ellipse-white.svg) no-repeat;
         background-size: 90px, 90px;
-        background-position: calc(100%/2 + 10px) 560px, calc(100%/2 + 10px) 1285px;
+        background-position: calc(100%/2 + 10px) 560px, calc(100%/2 + 10px) 1285px;  */
         @media (max-width: $r_tab_md) {
             padding-top: 50px;
             margin-bottom: 30px;
-            background-position: calc(100%/2 + 10px) 620px, calc(100%/2 + 10px) 1350px;
+/*            background-position: calc(100%/2 + 10px) 620px, calc(100%/2 + 10px) 1350px;  */
+        }
+        @media (max-width: $r_mob_sm) {
+ /*           padding-top: 50px;
+            margin-bottom: 30px;   */
+/*            background-size: calc(((100vw - 360px)/(576 - 360)) * (90 - 40) + 40px);
+            background-position: calc(100%/2 + 3px) 580px, calc(100%/2 + 10px) 1300px;  */
+/*            background-position-x: calc(100%/2 + 3px), calc(100%/2 + 3px);
+            background-position-y: calc(413px + (580 - 413)*((100vw - 360px)/(576 - 360))), calc(((100vw - 360px)/(576 - 360)) * (1300 - 910) + 910px);  */
         }
         @media (max-width: $r_mob_360) {
             padding-top: 65px;
@@ -1045,7 +1144,8 @@ h5 {
     &__rate {
         width: 100%;
         height: 246px;
-        margin: 58px 0;
+        margin: 37px 0;
+        padding: 22px 0 19px;
         display: flex;
         justify-content: start;
         align-items: stretch;
@@ -1056,8 +1156,51 @@ h5 {
             gap: 0;
         }
         @media (max-width: $r_mob_360) {
-            height: 181px;
-            margin: 39px 0 29px;
+            height: 182px;
+            margin: 17px 0;
+            padding: 22px 0 11px;
+/*            margin: 39px 0 29px;  */
+        }
+        &:first-of-type {
+            background: url(../images/ellipse-white.svg) no-repeat;
+            background-size: 90px;
+            background-position: calc(100%/2 + 10px) 96%;
+            @media (max-width: $r_desk_xl) {
+                background-position: calc(100%/2 + 110px) 96%;
+            }
+            @media (max-width: $r_tab_md) {
+                background-position: calc(100%/2 + 0px) 96%;
+            }
+            @media (max-width: $r_mob_sm) {
+                background-size: calc(((100vw - 360px)/(576 - 360)) * (90 - 40) + 40px);
+                background-position: calc(100%/2 + calc(((100vw - 360px)/(576 - 360)) * (10 - 0) + 0px)) calc(((100vw - 360px)/(576 - 360)) * (96 - 92) + 92%);
+            }
+            @media (max-width: $r_mob_360) {
+                background-size: 40px;
+                background-position: calc(100%/2 + 0px) 92%;
+            }
+        }
+        &:last-of-type {
+            background: url(../images/ellipse-white.svg) no-repeat;
+            background-size: 90px;
+            background-position: calc(100%/2 + 10px) 96%;
+            @media (max-width: $r_desk_xl) {
+                background-position: calc(100%/2 + 110px) 96%;
+            }
+            @media (max-width: $r_desk_lg) {
+                height: 285px;
+            }
+            @media (max-width: $r_tab_md) {
+                background-position: calc(100%/2 + 0px) 96%;
+            }
+            @media (max-width: $r_mob_sm) {
+                background-size: calc(((100vw - 360px)/(576 - 360)) * (90 - 40) + 40px);
+                background-position: calc(100%/2 + calc(((100vw - 360px)/(576 - 360)) * (10 - 0) + 0px)) calc(((100vw - 360px)/(576 - 360)) * (96 - 92) + 92%);
+            }
+            @media (max-width: $r_mob_360) {
+                background-size: 40px;
+                background-position: calc(100%/2 + 0px) 92%;
+            }
         }
     }
 }
@@ -1140,7 +1283,7 @@ h5 {
 .feedback {
     background: url(../images/polygon-1.svg) no-repeat, url(../images/ellipse-white.svg)no-repeat;
     background-size: 69px, 300px;
-    background-position: calc((100% - 1140px)/2 - 143px) 60px, calc((100% - 1140px)/2) 14.5px;
+    background-position: calc((100% - 1140px)/2 - 143px) 121px, calc((100% - 1140px)/2) 69.5px;
     @media (max-width: $r_desk_1600) {
         background-position: calc((100% - 1140px)/2 - 90px) 5px, calc((100% - 1140px)/2 + 25px) 14.5px;
     }
@@ -1164,7 +1307,7 @@ h5 {
         padding-top: 100px;
         flex-direction: column;
         @media (max-width: $r_mob_360) {
-            padding-top: 54px;
+            padding-top: 56px;
         }
     }
     &__content {
@@ -1207,7 +1350,7 @@ h5 {
             padding: 59px 0 50px;
         }
         @media (max-width: $r_mob_360) {
-            padding: 41px 0 40px;
+            padding: 37px 0 40px;
             min-height: auto;
             height: 440px;
         }
